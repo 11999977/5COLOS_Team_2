@@ -1,0 +1,61 @@
+@import "config";
+
+@mixin button {
+  display: block;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 1.5rem;
+  outline: none;
+  border: 0;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin contact-input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+  border: none;
+  transition: all 0.5s;
+  border-bottom: 2px solid $grey;
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:focus {
+    border-bottom: 2px solid $green;
+  }
+}
+
+%heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.75rem;
+}
+
+%subheading {
+  color: $green;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+%lead {
+  font-size: 0.875rem;
+  line-height: 1.875rem;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  margin: auto;
+}
